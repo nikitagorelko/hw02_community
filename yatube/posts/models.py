@@ -9,12 +9,12 @@ class Group(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
     description = models.TextField(verbose_name='Описание')
 
-    def __str__(self) -> str:
-        return self.title
-
     class Meta:
         verbose_name = 'Группа'
         verbose_name_plural = 'Группы'
+
+    def __str__(self) -> str:
+        return self.title
 
 
 class Post(models.Model):
